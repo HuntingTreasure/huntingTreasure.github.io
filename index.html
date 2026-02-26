@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Trailer - Inicio</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <!-- Navbar con logos responsive -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <!-- Logo para escritorio -->
+                <img src="img/hunting.png" alt="Hunting Treasure" class="logo" width="250">
+                <!-- Logo para móvil -->
+                <img src="img/hunting_mobile.png" alt="Hunting Treasure" class="logo-mobile">
+            </a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="social-icons-nav">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="paquetes.html">Paquetes turísticos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Slider Moderno - SOLO PARA INDEX -->
+            <div class="hero-slider" id="hero">
+                <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+                    <div class="slide-content">
+                        <h1>HUNTING TRAILER
+                            <span>Explora el Perú profundo</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+                    <div class="slide-content">
+                        <h1>AVENTURA Y NATURALEZA
+                            <span>Descubre paisajes increíbles</span>
+                        </h1>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+                    <div class="slide-content">
+                        <h1>MACHU PICCHU
+                            <span>La joya del imperio inca</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <button class="slider-arrow prev" id="heroPrev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-arrow next" id="heroNext"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="slider-dots-hero" id="heroDots">
+                    <span class="dot-hero active"></span>
+                    <span class="dot-hero"></span>
+                    <span class="dot-hero"></span>
+                </div>
+            </div>
+
+    <!-- Sección Destinos con Slider y Ver Todo -->
+    <section class="destinos" id="destinos">
+        <div class="section-header">
+            <h2>Nuestros Destinos Turísticos</h2>
+        </div>
+        
+        <div class="slider-container">
+            <button class="slider-btn prev" id="prevBtn" disabled><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="slider-track" id="sliderTrack">
+                <!-- Cards de destinos -->
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-content">
+                        <h3>Machu Picchu</h3>
+                        <p class="duration"><i class="far fa-calendar-alt"></i> 1 Day</p>
+                        <p class="duration"><i class="fas fa-map-marker-alt"></i> Cusco-Perú</p>
+                        <div class="price">
+                            <span class="price-old">$230</span>
+                            <span class="price-new">$120</span>
+                        </div>
+                        <button class="btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="card-content">
+                        <h3>Valle Sagrado</h3>
+                        <p class="duration"><i class="far fa-calendar-alt"></i> 1 Day</p>
+                        <p class="duration"><i class="fas fa-map-marker-alt"></i> Cusco-Perú</p>
+                        <div class="price">
+                            <span class="price-old">$230</span>
+                            <span class="price-new">$120</span>
+                        </div>
+                        <button class="btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="card-content">
+                        <h3>Montaña 7 Colores</h3>
+                        <p class="duration"><i class="far fa-calendar-alt"></i> 1 Day</p>
+                        <p class="duration"><i class="fas fa-map-marker-alt"></i> Cusco-Perú</p>
+                        <div class="price">
+                            <span class="price-old">$230</span>
+                            <span class="price-new">$120</span>
+                        </div>
+                        <button class="btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="card-content">
+                        <h3>Laguna Humantay</h3>
+                        <p class="duration"><i class="far fa-calendar-alt"></i> 1 Day</p>
+                        <p class="duration"><i class="fas fa-map-marker-alt"></i> Cusco-Perú</p>
+                        <div class="price">
+                            <span class="price-old">$250</span>
+                            <span class="price-new">$180</span>
+                        </div>
+                        <button class="btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1529074963764-98f45c47344b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="card-content">
+                        <h3>Ruta del Café</h3>
+                        <p class="duration"><i class="far fa-calendar-alt"></i> 2 Days</p>
+                        <p class="duration"><i class="fas fa-map-marker-alt"></i> Chanchamayo</p>
+                        <div class="price">
+                            <span class="price-old">$320</span>
+                            <span class="price-new">$250</span>
+                        </div>
+                        <button class="btn">Reservar</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1596422846541-2809d1917999?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')"></div>
+                    <div class="card-content">
+                        <h3>Líneas de Nazca</h3>
+                        <p class="duration"><i class="far fa-calendar-alt"></i> 1 Day</p>
+                        <p class="duration"><i class="fas fa-map-marker-alt"></i> Ica-Perú</p>
+                        <div class="price">
+                            <span class="price-old">$280</span>
+                            <span class="price-new">$200</span>
+                        </div>
+                        <button class="btn">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+
+        <div class="slider-dots" id="sliderDots"></div>
+        <div class="section-header">
+            <button class="btn-ver-todo">Ver todo <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Paquetes turísticos - Ancho completo -->
+    <section class="paquetes-full" id="paquetes">
+        <div class="section-header-full">
+            <h2>Paquetes turísticos</h2>
+        </div>
+        
+        <div class="paquetes-grid-full">
+            <!-- Paquete 1 - Circuitos Culturales -->
+            <div class="paquete-card-full" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1591628006356-5c1c1b8d3b8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                <div class="paquete-contenido-full">
+                    <h3>Circuitos Culturales</h3>
+                    <button class="btn-ver-mas-full">Ver más</button>
+                </div>
+            </div>
+            
+            <!-- Paquete 2 - Aventura y Naturaleza -->
+            <div class="paquete-card-full" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                <div class="paquete-contenido-full">
+                    <h3>Aventura y Naturaleza</h3>
+                    <button class="btn-ver-mas-full">Ver más</button>
+                </div>
+            </div>
+            
+            <!-- Paquete 3 - Experiencias Vivenciales -->
+            <div class="paquete-card-full" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1524061614494-14f7c5d1f3a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                <div class="paquete-contenido-full">
+                    <h3>Experiencias Vivenciales</h3>
+                    <button class="btn-ver-mas-full">Ver más</button>
+                </div>
+            </div>
+            
+            <!-- Paquete 4 - Machupicchu -->
+            <div class="paquete-card-full" style="background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80');">
+                <div class="paquete-contenido-full">
+                    <h3>Machupicchu</h3>
+                    <button class="btn-ver-mas-full">Ver más</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section-footer-full">
+            <button class="btn-ver-todo-full">Ver todo <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="nosotros" id="nosotros">
+        <h2>Nosotros</h2>
+        <div class="nosotros-content">
+            <div class="nosotros-texto">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+            </div>
+            <div class="valores-grid">
+                <div class="valor-item">Misión</div>
+                <div class="valor-item">Visión</div>
+                <div class="valor-item">Valores</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog con Ver Todo -->
+    <section class="blog" id="blog">
+        <div class="section-header">
+            <h2>Blog</h2>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <p><i class="fas fa-quote-left"></i> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+            </div>
+            <div class="blog-post">
+                <p><i class="fas fa-quote-left"></i> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Many desktop publishing packages and web page editors.</p>
+            </div>
+            <div class="blog-post">
+                <p><i class="fas fa-quote-left"></i> Here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
+            </div>
+        </div>
+        <div class="section-header">
+            <button class="btn-ver-todo">Ver todo <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="resenas">
+        <h2>Reseñas</h2>
+        <div class="resenas-container">
+            <p>"Here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum."</p>
+            <div class="tripadvisor">
+                <i class="fab fa-tripadvisor"></i> Tripadvisor
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Explora</h3>
+                <ul>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="paquetes.html">Paquetes turísticos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +51 987653241</li>
+                    <li><i class="fas fa-envelope"></i> correo@gmail.com</li>
+                    <li><i class="fab fa-instagram"></i> @nombre</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Términos</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Reclamaciones</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <div class="copyright-symbols">
+                <i class="far fa-copyright"></i>
+                <span>三</span>
+                <i class="fas fa-registered"></i>
+                <span>TM</span>
+            </div>
+            <div class="copyright-text">
+                <strong>leodanzamalloa</strong> | Todos los derechos reservados 2026
+            </div>
+        </div>
+    </footer>
+        <!-- WhatsApp Chatbot -->
+    <div class="whatsapp-chat">
+        <a href="https://wa.me/51987653241?text=Hola%20Hunting%20Treasure%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos" 
+        class="whatsapp-button" 
+        target="_blank"
+        rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">¿Necesitas ayuda?</span>
+        </a>
+    </div>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
