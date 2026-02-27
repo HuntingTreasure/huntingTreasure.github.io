@@ -854,6 +854,13 @@ body {
     font-weight: 600;
 }
 
+.mision_empresa{
+    opacity: 100;
+}
+.mision_empresa:hover{
+        
+}
+
 /* ===== BLOG ===== */
 .blog {
     background: white;
@@ -1168,6 +1175,15 @@ body {
 .copyright-text strong {
     color: #FFBF00; /* Ámbar */
     font-weight: 600;
+}
+.copyright-text .leodan {
+    font-weight: 300;
+}
+
+.copyright-text .leodan {
+    color: #FFBF00; /* Ámbar */
+    font-weight: 600;
+    text-decoration: none;
 }
 
 /* ===== RESPONSIVE ===== */
