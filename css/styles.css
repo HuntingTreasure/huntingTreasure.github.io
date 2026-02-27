@@ -585,6 +585,18 @@ body {
     color: #FFBF00; /* Ámbar */
 }
 
+.destino-card .location {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.destino-card .location i {
+    margin-right: 5px;
+    color: #FFBF00; /* Ámbar */
+}
+
 .destino-card h3 {
     color: #1A4D5E; /* Azul petróleo */
     margin-bottom: 10px;
@@ -669,14 +681,14 @@ body {
     width: 98%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0; /* Sin espacios entre tarjetas */
+    /*gap: 0; /* Sin espacios entre tarjetas */
     margin-left: 20px;
 }
 
 .paquete-card-full {
     background-size: cover;
     background-position: center;
-    height: 220px; /* Altura moderada */
+    height: 440px; /* Altura moderada */
     display: flex;
     align-items: flex-end; /* Contenido alineado abajo */
     position: relative;
