@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunting Treasure - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/hunting.png" alt="Hunting Treasure" class="logo">
+                <img src="img/hunting_mobile.png" alt="Hunting Treasure" class="logo-mobile">
+            </a>
+        </div>
+        <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        <div class="nav-actions">
+            
+            
+            <div class="social-icons-nav">
+                <a href="https://www.facebook.com/share/1Dxzxhgan9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/huntingtreasure_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d15873923-Reviews-Hunting_Treasure_Peru-Cusco_Cusco_Region.html" target="_blank"><i class="fa fa-tripadvisor"></i></a>
+                <a href="https://www.youtube.com/@huntingtreasureperu1540" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="carrito-icono" id="carritoIcono">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="carrito-contador" id="carritoContador">0</span>
+            </div>
+        </div>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinos.html">Destinations</a></li>
+            <li><a href="paquetes.html">Tour packages</a></li>
+            <li><a href="nosotros.html">Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+    </nav>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><i class="fas fa-chevron-right"></i></li>
+            <li><span>Cart</span></li>
+        </ul>
+    </div>
+
+    <!-- Cart Page Content -->
+    <section class="carrito-pagina">
+        <div class="carrito-header-pagina">
+            <h1>Your Shopping Cart</h1>
+        </div>
+
+        <div class="carrito-contenedor" id="carritoContenedor">
+            <!-- Items will be loaded here -->
+        </div>
+
+        <div class="carrito-resumen">
+            <div class="carrito-total-pagina">Total: $<span id="carritoTotalPagina">0.00</span></div>
+            <div class="medios-pago" style="margin-bottom: 20px;">
+                <h4>Payment methods</h4>
+                <div class="pago-iconos">
+                    <a href="#" onclick="return consultarPago('Visa')" title="Pay with Visa"><i class="fab fa-cc-visa"></i></a>
+                    <a href="#" onclick="return consultarPago('Mastercard')" title="Pay with Mastercard"><i class="fab fa-cc-mastercard"></i></a>
+                    <a href="#" onclick="return consultarPago('American Express')" title="Pay with American Express"><i class="fab fa-cc-amex"></i></a>
+                    <a href="#" onclick="return consultarPago('PayPal')" title="Pay with PayPal"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="#" onclick="return consultarPago('bank transfer')" title="Bank transfer"><i class="fas fa-university"></i></a>
+                </div>
+                <div class="selector-pago">
+                    <label for="metodoPago">Choose your payment method:</label>
+                    <select id="metodoPago">
+                        <option value="Credit/Debit card">Credit/Debit card</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="Bank transfer">Bank transfer</option>
+                        <option value="Cash (office)">Cash (office)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-pagar-pagina" id="btnPagarPagina">Pay with WhatsApp</button>
+            <button class="btn-seguir-comprando" onclick="window.location.href='paquetes.html'">Continue Shopping</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="destinos.html">Destinations</a></li>
+                    <li><a href="paquetes.html">Tour packages</a></li>
+                    <li><a href="nosotros.html">Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +51 931023833</li>
+                    <li><i class="fas fa-envelope"></i> huntingtreasure@gmail.com</li>
+                    <li><i class="fab fa-instagram"></i> @huntingtreasure</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Claims</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright-text">
+                <strong><a class="leodan" href="https://leodanzamalloa.github.io/">leodanzamalloa</a></strong> | All rights reserved 2026
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat -->
+    <div class="whatsapp-chat">
+        <a href="https://wa.me/51931023833?text=Good%20afternoon%20Hunting%20Treasure%2C%20I%20would%20like%20more%20information%20about%20your%20tour%20packages." 
+           class="whatsapp-button" 
+           target="_blank"
+           rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Need help?</span>
+        </a>
+    </div>
+
+    <!-- Cart Panel (hidden but functional) -->
+    <div class="carrito-panel" id="carritoPanel">
+        <div class="carrito-header">
+            <h3>Your Cart</h3>
+            <span class="cerrar-carrito" id="cerrarCarrito">&times;</span>
+        </div>
+        <div class="carrito-items" id="carritoItems"></div>
+        <div class="carrito-footer">
+            <div class="carrito-total">Total: $<span id="carritoTotal">0.00</span></div>
+            <div class="medios-pago">
+                <h4>Payment methods</h4>
+                <div class="pago-iconos">
+                    <a href="#" onclick="return consultarPago('Visa')" title="Pay with Visa"><i class="fab fa-cc-visa"></i></a>
+                    <a href="#" onclick="return consultarPago('Mastercard')" title="Pay with Mastercard"><i class="fab fa-cc-mastercard"></i></a>
+                    <a href="#" onclick="return consultarPago('American Express')" title="Pay with American Express"><i class="fab fa-cc-amex"></i></a>
+                    <a href="#" onclick="return consultarPago('PayPal')" title="Pay with PayPal"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="#" onclick="return consultarPago('bank transfer')" title="Bank transfer"><i class="fas fa-university"></i></a>
+                </div>
+                <div class="selector-pago">
+                    <label for="metodoPago">Choose your payment method:</label>
+                    <select id="metodoPago">
+                        <option value="Credit/Debit card">Credit/Debit card</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="Bank transfer">Bank transfer</option>
+                        <option value="Cash (office)">Cash (office)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-pagar" id="btnPagar">Pay with WhatsApp</button>
+        </div>
+    </div>
+    <div class="overlay-carrito" id="overlayCarrito"></div>
+
+    <script src="data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
