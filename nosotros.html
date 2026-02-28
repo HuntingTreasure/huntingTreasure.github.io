@@ -1,175 +1,209 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunting Trailer - Nosotros</title>
-    <!-- Font Awesome -->
+    <title>Hunting Treasure - About Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo-container">
             <a href="index.html">
-                <!-- Logo para escritorio -->
-                <img src="img/hunting.png" alt="Hunting Treasure" class="logo" width="250">
-                <!-- Logo para móvil -->
+                <img src="img/hunting.png" alt="Hunting Treasure" class="logo">
                 <img src="img/hunting_mobile.png" alt="Hunting Treasure" class="logo-mobile">
             </a>
         </div>
-
         <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-
-        <div class="social-icons-nav">
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-tripadvisor"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <i class="fas fa-bars"></i>
+            </div>
+        <div class="nav-actions">
+            
+            
+            <div class="social-icons-nav">
+                <a href="https://www.facebook.com/share/1Dxzxhgan9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/huntingtreasure_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d15873923-Reviews-Hunting_Treasure_Peru-Cusco_Cusco_Region.html" target="_blank"><i class="fa fa-tripadvisor"></i></a>
+                <a href="https://www.youtube.com/@huntingtreasureperu1540" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="carrito-icono" id="carritoIcono">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="carrito-contador" id="carritoContador">0</span>
+            </div>
         </div>
 
         <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="destinos.html">Destinos</a></li>
-            <li><a href="paquetes.html">Paquetes turísticos</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinos.html">Destinations</a></li>
+            <li><a href="paquetes.html">Tour packages</a></li>
+            <li><a href="nosotros.html">Us</a></li>
             <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 
     <div class="overlay" id="overlay"></div>
 
-    
-
-    <!-- Slider de página interna -->
-    <div class="hero-slider page-slider" style="height: 300px;">
+    <!-- Page Slider -->
+    <div class="hero-slider page-slider">
         <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
             <div class="slide-content">
-                <h1 style="font-size: 2.5rem;">NOSOTROS
-                    <span>Conoce nuestra historia</span>
+                <h1>ABOUT US
+                    <span>Know our story</span>
                 </h1>
             </div>
         </div>
     </div>
-    <!-- Migas de pan -->
+
+    <!-- Breadcrumb -->
     <div class="breadcrumb">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><i class="fas fa-chevron-right"></i></li>
-            <li><span>Nosotros</span></li>
+            <li><span>About us</span></li>
         </ul>
     </div>
-    <!-- Página Nosotros -->
+
+    <!-- About Us Content -->
     <section class="todos-destinos">
         <div class="destinos-header">
-            <h1>NOSOTROS</h1>
+            <h1>ABOUT US</h1>
         </div>
 
         <div style="margin-bottom: 60px;">
             <div class="nosotros-content" style="margin-bottom: 40px;">
                 <div class="nosotros-texto">
                     <h3 style="color: #e67e22; margin-bottom: 20px;">-</h3>
-                    <p>En Hunting Treasure, nos apasiona convertir tus sueños de viaje en experiencias inolvidables. Nacimos del amor por la aventura y el deseo de mostrar al mundo los tesoros escondidos de nuestro planeta, con un enfoque especial en la magia y la historia que encierra Cusco, el corazón del Imperio Inca.</p>
-                    <p>Creemos que viajar va más allá de visitar lugares; se trata de conectar con culturas vivas, desafiar tus propios límites y crear historias que merecen ser contadas. Por eso, diseñamos cada uno de nuestros itinerarios con el cuidado y la dedicación que nuestros viajeros merecen, combinando la emoción del descubrimiento con la seguridad y el confort que necesitas.</p>
-                    <p>Nuestro equipo está formado por guías locales expertos, apasionados narradores de historias y amantes de la naturaleza que conocen cada sendero, cada piedra y cada rincón secreto como la palma de su mano. Desde la imponente ciudadela de Machu Picchu hasta las cumbres multicolores de Vinicunca, pasando por los desafiantes treks de Choquequirao y el místico Ausangate, estamos aquí para guiarte en cada paso.</p>
+                    <p>At Hunting Treasure, we are passionate about turning your travel dreams into unforgettable experiences. We were born from a love for adventure and the desire to show the world the hidden treasures of our planet, with a special focus on the magic and history of Cusco, the heart of the Inca Empire.</p>
+                    <p>We believe that traveling goes beyond visiting places; it's about connecting with living cultures, challenging your own limits, and creating stories worth telling. That's why we design each of our itineraries with the care and dedication our travelers deserve, combining the excitement of discovery with the safety and comfort you need.</p>
+                    <p>Our team is made up of expert local guides, passionate storytellers, and nature lovers who know every path, every stone, and every secret corner like the back of their hand. From the imposing citadel of Machu Picchu to the colorful peaks of Vinicunca, through the challenging treks of Choquequirao and the mystical Ausangate, we are here to guide you every step of the way.</p>
                 </div>
                 <div>
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sobre nosotros" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="About us" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
                 </div>
             </div>
 
             <div class="valores-grid" style="margin-bottom: 40px;">
-                <div class="valor-item" style="background: #e67e22;">Misión</div>
-                <div class="valor-item" style="background: #3498db;">Visión</div>
-                <div class="valor-item" style="background: #27ae60;">Valores</div>
+                <div class="valor-item" style="background: #e67e22;">Mission</div>
+                <div class="valor-item" style="background: #3498db;">Vision</div>
+                <div class="valor-item" style="background: #27ae60;">Values</div>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center;">
                 <div>
                     <i class="fas fa-users" style="font-size: 3rem; color: #e67e22; margin-bottom: 20px;"></i>
                     <h3>+5000</h3>
-                    <p>Clientes satisfechos</p>
+                    <p>Satisfied customers</p>
                 </div>
                 <div>
                     <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: #e67e22; margin-bottom: 20px;"></i>
                     <h3>+50</h3>
-                    <p>Destinos</p>
+                    <p>Destinations</p>
                 </div>
                 <div>
                     <i class="fas fa-clock" style="font-size: 3rem; color: #e67e22; margin-bottom: 20px;"></i>
-                    <h3>+10 años</h3>
-                    <p>Experiencia</p>
+                    <h3>+10 years</h3>
+                    <p>Experience</p>
                 </div>
             </div>
         </div>
 
-        <!-- Sección Reseñas simplificada -->
+        <!-- Simplified Reviews -->
         <section class="resenas-simplificadas">
-            <h2>Reseñas</h2>
-            <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+            <h2>Reviews</h2>
+            <p>Here are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
         </section>
     </section>
-<footer class="footer">
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Explora</h3>
+                <h3>Explore</h3>
                 <ul>
-                    <li><a href="destinos.html">Destinos</a></li>
-                    <li><a href="paquetes.html">Paquetes turísticos</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="destinos.html">Destinations</a></li>
+                    <li><a href="paquetes.html">Tour packages</a></li>
+                    <li><a href="nosotros.html">Us</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contacto</h3>
+                <h3>Contact</h3>
                 <ul>
-                    <li><i class="fas fa-phone"></i> +51 987653241</li>
-                    <li><i class="fas fa-envelope"></i> correo@gmail.com</li>
-                    <li><i class="fab fa-instagram"></i> @nombre</li>
+                    <li><i class="fas fa-phone"></i> +51 931023833</li>
+                    <li><i class="fas fa-envelope"></i> huntingtreasure@gmail.com</li>
+                    <li><i class="fab fa-instagram"></i> @huntingtreasure</li>
                 </ul>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    <a href="#"><i class="fa fa-tripadvisor"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-section">
                 <h3>Legal</h3>
                 <ul>
-                    <li><a href="#">Términos</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Reclamaciones</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Claims</a></li>
                 </ul>
             </div>
         </div>
-        
         <div class="copyright">
-            <div class="copyright-symbols">
-                <i class="far fa-copyright"></i>
-                <span>三</span>
-                <i class="fas fa-registered"></i>
-                <span>TM</span>
-                <span>2O®WBSO®D</span>
-            </div>
             <div class="copyright-text">
-                <strong>leodanzamalloa</strong> | Todos los derechos reservados 2026
+                <strong><a class="leodan" href="https://leodanzamalloa.github.io/">leodanzamalloa</a></strong> | All rights reserved 2026
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Chat -->
     <div class="whatsapp-chat">
-        <a href="https://wa.me/51931023833?text=Hola%20Hunting%20Treasure%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos" 
-        class="whatsapp-button" 
-        target="_blank"
-        rel="noopener noreferrer">
+        <a href="https://wa.me/51931023833?text=Good%20afternoon%20Hunting%20Treasure%2C%20I%20would%20like%20more%20information%20about%20your%20tour%20packages." 
+           class="whatsapp-button" 
+           target="_blank"
+           rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
-            <span class="whatsapp-tooltip">¿Necesitas ayuda?</span>
+            <span class="whatsapp-tooltip">Need help?</span>
         </a>
     </div>
+
+    <!-- Cart Panel -->
+    <div class="carrito-panel" id="carritoPanel">
+        <div class="carrito-header">
+            <h3>Your Cart</h3>
+            <span class="cerrar-carrito" id="cerrarCarrito">&times;</span>
+        </div>
+        <div class="carrito-items" id="carritoItems"></div>
+        <div class="carrito-footer">
+            <div class="carrito-total">Total: $<span id="carritoTotal">0.00</span></div>
+            <div class="medios-pago">
+                <h4>Payment methods</h4>
+                <div class="pago-iconos">
+                    <a href="#" onclick="return consultarPago('Visa')" title="Pay with Visa"><i class="fab fa-cc-visa"></i></a>
+                    <a href="#" onclick="return consultarPago('Mastercard')" title="Pay with Mastercard"><i class="fab fa-cc-mastercard"></i></a>
+                    <a href="#" onclick="return consultarPago('American Express')" title="Pay with American Express"><i class="fab fa-cc-amex"></i></a>
+                    <a href="#" onclick="return consultarPago('PayPal')" title="Pay with PayPal"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="#" onclick="return consultarPago('bank transfer')" title="Bank transfer"><i class="fas fa-university"></i></a>
+                </div>
+                <div class="selector-pago">
+                    <label for="metodoPago">Choose your payment method:</label>
+                    <select id="metodoPago">
+                        <option value="Credit/Debit card">Credit/Debit card</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="Bank transfer">Bank transfer</option>
+                        <option value="Cash (office)">Cash (office)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-pagar" id="btnPagar">Pay with WhatsApp</button>
+        </div>
+    </div>
+    <div class="overlay-carrito" id="overlayCarrito"></div>
+
+    <script src="data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
-
