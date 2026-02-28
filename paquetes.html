@@ -1,184 +1,241 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunting Trailer - Paquetes Turísticos</title>
-    <!-- Font Awesome -->
+    <title>Hunting Treasure - Tour Packages</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo-container">
             <a href="index.html">
-                <!-- Logo para escritorio -->
-                <img src="img/hunting.png" alt="Hunting Treasure" class="logo" width="250">
-                <!-- Logo para móvil -->
+                <img src="img/hunting.png" alt="Hunting Treasure" class="logo">
                 <img src="img/hunting_mobile.png" alt="Hunting Treasure" class="logo-mobile">
             </a>
         </div>
-
         <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-
-        <div class="social-icons-nav">
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-tripadvisor"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <i class="fas fa-bars"></i>
+            </div>
+        <div class="nav-actions">
+            
+            
+            <div class="social-icons-nav">
+                <a href="https://www.facebook.com/share/1Dxzxhgan9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/huntingtreasure_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d15873923-Reviews-Hunting_Treasure_Peru-Cusco_Cusco_Region.html" target="_blank"><i class="fa fa-tripadvisor"></i></a>
+                <a href="https://www.youtube.com/@huntingtreasureperu1540" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="carrito-icono" id="carritoIcono">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="carrito-contador" id="carritoContador">0</span>
+            </div>
         </div>
 
         <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="destinos.html">Destinos</a></li>
-            <li><a href="paquetes.html">Paquetes turísticos</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinos.html">Destinations</a></li>
+            <li><a href="paquetes.html">Tour packages</a></li>
+            <li><a href="nosotros.html">Us</a></li>
             <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 
     <div class="overlay" id="overlay"></div>
 
-    
-
-    <!-- Slider de página interna -->
-    <div class="hero-slider page-slider" style="height: 300px;">
+    <!-- Page Slider -->
+    <div class="hero-slider page-slider">
         <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
             <div class="slide-content">
-                <h1 style="font-size: 2.5rem;">PAQUETES TURÍSTICOS
-                    <span>Las mejores ofertas para ti</span>
+                <h1>TOUR PACKAGES
+                    <span>The best offers for you</span>
                 </h1>
             </div>
         </div>
     </div>
-    <!-- Migas de pan -->
-    
+
+    <!-- Breadcrumb -->
     <div class="breadcrumb">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><i class="fas fa-chevron-right"></i></li>
-            <li><span>Paquetes Turísticos</span></li>
+            <li><span>Tour packages</span></li>
         </ul>
     </div>
-    <!-- Página de Paquetes Turísticos -->
+
+    <!-- Packages Grid -->
     <section class="todos-destinos">
         <div class="destinos-header">
-            <h1>TODOS LOS PAQUETES</h1>
+            <h1>ALL PACKAGES</h1>
         </div>
 
         <div class="paquetes-grid" style="margin-bottom: 60px;">
+            <!-- Adventure and Nature -->
             <div class="paquete-item">
-                <h3>Aventura y Naturaleza</h3>
-                <p class="duration"><i class="fas fa-map-marker-alt"></i> Cusco, Selva</p>
+                <h3>Adventure and Nature</h3>
+                <p class="duration"><i class="fas fa-map-marker-alt"></i> Cusco, Jungle</p>
                 <p class="duration"><i class="far fa-calendar-alt"></i> 5 Days / 4 Nights</p>
-                <div class="precio" style="font-size: 1.5rem;">$ 450</div>
-                <button class="btn-small">Ver detalles</button>
+                <div class="precio" style="font-size: 1.5rem;">$450</div>
+                <button class="btn-small agregar-carrito" 
+                        data-id="paquete-aventura"
+                        data-nombre="Adventure and Nature"
+                        data-precio="450"
+                        data-duracion="5 Days / 4 Nights"
+                        data-imagen="https://i.ibb.co/qFPBshtz/paquetes-1.jpg"
+                        data-ubicacion="Cusco, Jungle">
+                    Add to cart
+                </button>
             </div>
+
+            <!-- Experiential Learning -->
             <div class="paquete-item">
-                <h3>Experiencias Vivenciales</h3>
-                <p class="duration"><i class="fas fa-map-marker-alt"></i> Comunidades Andinas</p>
+                <h3>Experiential Learning</h3>
+                <p class="duration"><i class="fas fa-map-marker-alt"></i> Andean Communities</p>
                 <p class="duration"><i class="far fa-calendar-alt"></i> 3 Days / 2 Nights</p>
-                <div class="precio" style="font-size: 1.5rem;">$ 320</div>
-                <button class="btn-small">Ver detalles</button>
+                <div class="precio" style="font-size: 1.5rem;">$320</div>
+                <button class="btn-small agregar-carrito" 
+                        data-id="paquete-experiencias"
+                        data-nombre="Experiential Learning"
+                        data-precio="320"
+                        data-duracion="3 Days / 2 Nights"
+                        data-imagen="https://i.ibb.co/sJsDQPFB/paquetes-3.jpg"
+                        data-ubicacion="Andean Communities">
+                    Add to cart
+                </button>
             </div>
+
+            <!-- Machupicchu Special -->
             <div class="paquete-item">
-                <h3>Machupicchu</h3>
+                <h3>Machupicchu Special</h3>
                 <p class="duration"><i class="fas fa-map-marker-alt"></i> Cusco</p>
                 <p class="duration"><i class="far fa-calendar-alt"></i> 2 Days / 1 Night</p>
-                <div class="precio" style="font-size: 1.5rem;">$ 280</div>
-                <button class="btn-small">Ver detalles</button>
+                <div class="precio" style="font-size: 1.5rem;">$280</div>
+                <button class="btn-small agregar-carrito" 
+                        data-id="paquete-machu"
+                        data-nombre="Machupicchu Special"
+                        data-precio="280"
+                        data-duracion="2 Days / 1 Night"
+                        data-imagen="https://i.ibb.co/bMRzhtW0/paquetes-2.jpg"
+                        data-ubicacion="Cusco">
+                    Add to cart
+                </button>
             </div>
+
+            <!-- Cultural Circuits -->
             <div class="paquete-item">
-                <h3>Líneas de Nazca</h3>
-                <p class="duration"><i class="fas fa-map-marker-alt"></i> Ica</p>
-                <p class="duration"><i class="far fa-calendar-alt"></i> 1 Day</p>
-                <div class="precio" style="font-size: 1.5rem;">$ 200</div>
-                <button class="btn-small">Ver detalles</button>
-            </div>
-            <div class="paquete-item">
-                <h3>Amazonía Peruana</h3>
-                <p class="duration"><i class="fas fa-map-marker-alt"></i> Iquitos</p>
+                <h3>Cultural Circuits</h3>
+                <p class="duration"><i class="fas fa-map-marker-alt"></i> Cusco</p>
                 <p class="duration"><i class="far fa-calendar-alt"></i> 4 Days / 3 Nights</p>
-                <div class="precio" style="font-size: 1.5rem;">$ 520</div>
-                <button class="btn-small">Ver detalles</button>
-            </div>
-            <div class="paquete-item">
-                <h3>Huascarán</h3>
-                <p class="duration"><i class="fas fa-map-marker-alt"></i> Huaraz</p>
-                <p class="duration"><i class="far fa-calendar-alt"></i> 5 Days / 4 Nights</p>
-                <div class="precio" style="font-size: 1.5rem;">$ 380</div>
-                <button class="btn-small">Ver detalles</button>
+                <div class="precio" style="font-size: 1.5rem;">$380</div>
+                <button class="btn-small agregar-carrito" 
+                        data-id="paquete-cultural"
+                        data-nombre="Cultural Circuits"
+                        data-precio="380"
+                        data-duracion="4 Days / 3 Nights"
+                        data-imagen="https://i.ibb.co/4RtpvNx4/paquetes-4.jpg"
+                        data-ubicacion="Cusco">
+                    Add to cart
+                </button>
             </div>
         </div>
 
-        <!-- Sección Reseñas simplificada -->
+        <!-- Simplified Reviews -->
         <section class="resenas-simplificadas">
-            <h2>Reseñas</h2>
-            <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+            <h2>Reviews</h2>
+            <p>Here are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
         </section>
-       
     </section>
+
+    <!-- Footer -->
     <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Explora</h3>
-                    <ul>
-                        <li><a href="destinos.html">Destinos</a></li>
-                        <li><a href="paquetes.html">Paquetes turísticos</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contacto</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +51 987653241</li>
-                        <li><i class="fas fa-envelope"></i> correo@gmail.com</li>
-                        <li><i class="fab fa-instagram"></i> @nombre</li>
-                    </ul>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tripadvisor"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Términos</a></li>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Reclamaciones</a></li>
-                    </ul>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="destinos.html">Destinations</a></li>
+                    <li><a href="paquetes.html">Tour packages</a></li>
+                    <li><a href="nosotros.html">Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +51 931023833</li>
+                    <li><i class="fas fa-envelope"></i> huntingtreasure@gmail.com</li>
+                    <li><i class="fab fa-instagram"></i> @huntingtreasure</li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            
-            <div class="copyright">
-                <div class="copyright-symbols">
-                    <i class="far fa-copyright"></i>
-                    <span>三</span>
-                    <i class="fas fa-registered"></i>
-                    <span>TM</span>
-                    <span>2O®WBSO®D</span>
-                </div>
-                <div class="copyright-text">
-                    <strong>leodanzamalloa</strong> | Todos los derechos reservados 2026
-                </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Claims</a></li>
+                </ul>
             </div>
-        </footer>
-        <div class="whatsapp-chat">
-        <a href="https://wa.me/51931023833?text=Hola%20Hunting%20Treasure%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos" 
-        class="whatsapp-button" 
-        target="_blank"
-        rel="noopener noreferrer">
+        </div>
+        <div class="copyright">
+            <div class="copyright-text">
+                <strong><a class="leodan" href="https://leodanzamalloa.github.io/">leodanzamalloa</a></strong> | All rights reserved 2026
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat -->
+    <div class="whatsapp-chat">
+        <a href="https://wa.me/51931023833?text=Good%20afternoon%20Hunting%20Treasure%2C%20I%20would%20like%20more%20information%20about%20your%20tour%20packages." 
+           class="whatsapp-button" 
+           target="_blank"
+           rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
-            <span class="whatsapp-tooltip">¿Necesitas ayuda?</span>
+            <span class="whatsapp-tooltip">Need help?</span>
         </a>
     </div>
+
+    <!-- Cart Panel -->
+    <div class="carrito-panel" id="carritoPanel">
+        <div class="carrito-header">
+            <h3>Your Cart</h3>
+            <span class="cerrar-carrito" id="cerrarCarrito">&times;</span>
+        </div>
+        <div class="carrito-items" id="carritoItems"></div>
+        <div class="carrito-footer">
+            <div class="carrito-total">Total: $<span id="carritoTotal">0.00</span></div>
+            <div class="medios-pago">
+                <h4>Payment methods</h4>
+                <div class="pago-iconos">
+                    <a href="#" onclick="return consultarPago('Visa')" title="Pay with Visa"><i class="fab fa-cc-visa"></i></a>
+                    <a href="#" onclick="return consultarPago('Mastercard')" title="Pay with Mastercard"><i class="fab fa-cc-mastercard"></i></a>
+                    <a href="#" onclick="return consultarPago('American Express')" title="Pay with American Express"><i class="fab fa-cc-amex"></i></a>
+                    <a href="#" onclick="return consultarPago('PayPal')" title="Pay with PayPal"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="#" onclick="return consultarPago('bank transfer')" title="Bank transfer"><i class="fas fa-university"></i></a>
+                </div>
+                <div class="selector-pago">
+                    <label for="metodoPago">Choose your payment method:</label>
+                    <select id="metodoPago">
+                        <option value="Credit/Debit card">Credit/Debit card</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="Bank transfer">Bank transfer</option>
+                        <option value="Cash (office)">Cash (office)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-pagar" id="btnPagar">Pay with WhatsApp</button>
+        </div>
+    </div>
+    <div class="overlay-carrito" id="overlayCarrito"></div>
+
+    <script src="data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
-
