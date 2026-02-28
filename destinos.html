@@ -1,252 +1,353 @@
-<!DOCTYPE html><!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hunting Trailer - Todos los Destinos</title>
-    <!-- Font Awesome -->
+    <title>Hunting Treasure - All Destinations</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo-container">
             <a href="index.html">
-                <!-- Logo para escritorio -->
-                <img src="img/hunting.png" alt="Hunting Treasure" class="logo" width="250">
-                <!-- Logo para móvil -->
+                <img src="img/hunting.png" alt="Hunting Treasure" class="logo">
                 <img src="img/hunting_mobile.png" alt="Hunting Treasure" class="logo-mobile">
             </a>
         </div>
-
         <div class="hamburger" id="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
-
-        <div class="social-icons-nav">
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-tripadvisor"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <i class="fas fa-bars"></i>
+            </div>
+        <div class="nav-actions">
+            
+            
+            <div class="social-icons-nav">
+                <a href="https://www.facebook.com/share/1Dxzxhgan9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/huntingtreasure_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tripadvisor.com.pe/Attraction_Review-g294314-d15873923-Reviews-Hunting_Treasure_Peru-Cusco_Cusco_Region.html" target="_blank"><i class="fa fa-tripadvisor"></i></a>
+                <a href="https://www.youtube.com/@huntingtreasureperu1540" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="carrito-icono" id="carritoIcono">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="carrito-contador" id="carritoContador">0</span>
+            </div>
         </div>
 
         <ul class="nav-menu" id="navMenu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="destinos.html">Destinos</a></li>
-            <li><a href="paquetes.html">Paquetes turísticos</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinos.html">Destinations</a></li>
+            <li><a href="paquetes.html">Tour packages</a></li>
+            <li><a href="nosotros.html">Us</a></li>
             <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
 
     <div class="overlay" id="overlay"></div>
 
-    <!-- Migas de pan -->
-    <!-- Slider de página interna -->
-        <div class="hero-slider page-slider" style="height: 300px;">
-            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
-                <div class="slide-content">
-                    <h1 style="font-size: 2.5rem;">TODOS LOS DESTINOS
-                        <span>Encuentra tu próxima aventura</span>
-                    </h1>
-                </div>
+    <!-- Page Slider -->
+    <div class="hero-slider page-slider">
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+            <div class="slide-content">
+                <h1>ALL DESTINATIONS
+                    <span>Find your next adventure</span>
+                </h1>
             </div>
         </div>
-        <div class="breadcrumb">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><i class="fas fa-chevron-right"></i></li>
-                <li><span>Destinos</span></li>
-            </ul>
-        </div>
-    <!-- Página de Todos los Destinos -->
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><i class="fas fa-chevron-right"></i></li>
+            <li><span>Destinations</span></li>
+        </ul>
+    </div>
+
+    <!-- Destinations Grid -->
     <section class="todos-destinos">
         <div class="destinos-header">
-            <h1>TODOS LOS DESTINOS</h1>
+            <h1>ALL DESTINATIONS</h1>
         </div>
 
         <div class="destinos-grid">
-            <!-- Card 1 city tour -->
+            <!-- City Tour -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/HLQ5kh2k/city-tour.jpg')"></div>
                 <div class="card-info">
-                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>Ciudad de Cusco y alrededores inmediatos</span>
+                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Day</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Cusco city</span>
                     <h3>City Tour Cusco</h3>
                     <div class="precio">$25</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="city-tour"
+                            data-nombre="City Tour Cusco"
+                            data-precio="25"
+                            data-duracion="1 Day"
+                            data-imagen="https://i.ibb.co/HLQ5kh2k/city-tour.jpg"
+                            data-ubicacion="Cusco city">
+                        Add to cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 2 Valle sagrado -->
+            <!-- Sacred Valley -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/r2y3cng5/valle-sagrado.jpg')"></div>
                 <div class="card-info">
-                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>A 15-60 km al noreste de Cusco</span>
-                    <h3>Valle Sagrado</h3>
+                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Day</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> 15-60 km NE of Cusco</span>
+                    <h3>Sacred Valley</h3>
                     <div class="precio">$45</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="valle-sagrado"
+                            data-nombre="Sacred Valley"
+                            data-precio="45"
+                            data-duracion="1 Day"
+                            data-imagen="https://i.ibb.co/r2y3cng5/valle-sagrado.jpg"
+                            data-ubicacion="15-60 km NE of Cusco">
+                        Add to cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 3 Machu Picchu-->
+            <!-- Machu Picchu -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/QF7VP5dV/machupicchu.jpg')"></div>
                 <div class="card-info">
-                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>Provincia de Urubamba</span>
+                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Day</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Urubamba</span>
                     <h3>Machu Picchu</h3>
                     <div class="precio">$300</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="machu-picchu"
+                            data-nombre="Machu Picchu"
+                            data-precio="300"
+                            data-duracion="1 Day"
+                            data-imagen="https://i.ibb.co/QF7VP5dV/machupicchu.jpg"
+                            data-ubicacion="Urubamba">
+                        Add to cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 4 Laguna Humantay-->
+            <!-- Humantay -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/Zq7tJ5L/humantay.jpg')"></div>
                 <div class="card-info">
-                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>En la ruta al Salkantay</span>
-                    <h3>Laguna Humantay</h3>
+                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Day</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Salkantay route</span>
+                    <h3>Humantay Lagoon</h3>
                     <div class="precio">$45</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="humantay"
+                            data-nombre="Humantay Lagoon"
+                            data-precio="45"
+                            data-duracion="1 Day"
+                            data-imagen="https://i.ibb.co/Zq7tJ5L/humantay.jpg"
+                            data-ubicacion="Salkantay route">
+                        Add to cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 5 Vinicunca-->
+            <!-- Vinicunca -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/N66TJfT9/vinicuna-2.jpg')"></div>
                 <div class="card-info">
-                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>Cordillera Vilcanota, a 3 horas de Cusco</span>
+                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Day</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Vilcanota Range</span>
                     <h3>Vinicunca</h3>
                     <div class="precio">$45</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="vinicunca"
+                            data-nombre="Vinicunca"
+                            data-precio="45"
+                            data-duracion="1 Day"
+                            data-imagen="https://i.ibb.co/N66TJfT9/vinicuna-2.jpg"
+                            data-ubicacion="Vilcanota Range">
+                        Add to cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 6 Palcoyo-->
+            <!-- Palcoyo -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/XZkwf4Hf/palcoyo.jpg')"></div>
                 <div class="card-info">
-                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>Distrito de Checacupe, Provincia de Canchis</span>
+                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Day</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Checacupe</span>
                     <h3>Palcoyo</h3>
                     <div class="precio">$60</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="palcoyo"
+                            data-nombre="Palcoyo"
+                            data-precio="60"
+                            data-duracion="1 Day"
+                            data-imagen="https://i.ibb.co/XZkwf4Hf/palcoyo.jpg"
+                            data-ubicacion="Checacupe">
+                        Add to cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 7 Inka Jungle Trek-->
+            <!-- Inka Jungle -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/Gf4TXPC7/inka-jungle.jpg')"></div>
                 <div class="card-info">
-                    <span class="duracion"><i class="far fa-calendar-alt"></i> 1 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>Desde el abra Málaga hasta Machu Picchu</span>
+                    <span class="duracion"><i class="far fa-calendar-alt"></i> 4 Days</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Málaga pass</span>
                     <h3>Inka Jungle Trek</h3>
                     <div class="precio">$250</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="inka-jungle"
+                            data-nombre="Inka Jungle Trek"
+                            data-precio="250"
+                            data-duracion="4 Days"
+                            data-imagen="https://i.ibb.co/Gf4TXPC7/inka-jungle.jpg"
+                            data-ubicacion="Málaga pass">
+                        Add to cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 8 Choquequirao Trek-->
+            <!-- Choquequirao -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/F4m2R0G5/choquequirao.jpg')"></div>
                 <div class="card-info">
                     <span class="duracion"><i class="far fa-calendar-alt"></i> 7 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>cañón del río Apurímac</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Apurímac canyon</span>
                     <h3>Choquequirao Trek</h3>
                     <div class="precio">$450</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="choquequirao"
+                            data-nombre="Choquequirao Trek"
+                            data-precio="450"
+                            data-duracion="7 Days"
+                            data-imagen="https://i.ibb.co/F4m2R0G5/choquequirao.jpg"
+                            data-ubicacion="Apurímac canyon">
+                        Add to cart
+                    </button>
                 </div>
             </div>
 
-            <!-- Card 8 Ausangate Trek -->
+            <!-- Ausangate -->
             <div class="destino-card">
                 <div class="card-image" style="background-image: url('https://i.ibb.co/prGGncw9/ausangate.jpg')"></div>
                 <div class="card-info">
                     <span class="duracion"><i class="far fa-calendar-alt"></i> 7 Days</span>
-                    <span class="location"><i class="fa-solid fa-location-dot"></i>el pico más alto de Cusco</span>
-                    <h3>Ausangate Trek </h3>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Highest peak in Cusco</span>
+                    <h3>Ausangate Trek</h3>
                     <div class="precio">$760</div>
-                    <button class="btn-reservar">Reservar</button>
+                    <button class="btn-reservar agregar-carrito" 
+                            data-id="ausangate"
+                            data-nombre="Ausangate Trek"
+                            data-precio="760"
+                            data-duracion="7 Days"
+                            data-imagen="https://i.ibb.co/prGGncw9/ausangate.jpg"
+                            data-ubicacion="Highest peak in Cusco">
+                        Add to cart
+                    </button>
                 </div>
             </div>
-
-            <!-- Card 8 Camino Inca + Valle Sagrado-->
-            
         </div>
 
-        <!-- Sección Reseñas simplificada -->
+        <!-- Simplified Reviews -->
         <section class="resenas-simplificadas">
-            <h2>Reseñas</h2>
-            <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+            <h2>Reviews</h2>
+            <p>Here are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
         </section>
-
-        <!-- Footer simplificado -->
-        
     </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Explora</h3>
+                <h3>Explore</h3>
                 <ul>
-                    <li><a href="destinos.html">Destinos</a></li>
-                    <li><a href="paquetes.html">Paquetes turísticos</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="destinos.html">Destinations</a></li>
+                    <li><a href="paquetes.html">Tour packages</a></li>
+                    <li><a href="nosotros.html">Us</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contacto</h3>
+                <h3>Contact</h3>
                 <ul>
-                    <li><i class="fas fa-phone"></i> +51 987653241</li>
-                    <li><i class="fas fa-envelope"></i> correo@gmail.com</li>
-                    <li><i class="fab fa-instagram"></i> @nombre</li>
+                    <li><i class="fas fa-phone"></i> +51 931023833</li>
+                    <li><i class="fas fa-envelope"></i> huntingtreasure@gmail.com</li>
+                    <li><i class="fab fa-instagram"></i> @huntingtreasure</li>
                 </ul>
                 <div class="social-icons">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    <a href="#"><i class="fa fa-tripadvisor"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-section">
                 <h3>Legal</h3>
                 <ul>
-                    <li><a href="#">Términos</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Reclamaciones</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Claims</a></li>
                 </ul>
             </div>
         </div>
-        
         <div class="copyright">
-            <div class="copyright-symbols">
-                <i class="far fa-copyright"></i>
-                <span>三</span>
-                <i class="fas fa-registered"></i>
-                <span>TM</span>
-                <span>2O®WBSO®D</span>
-            </div>
             <div class="copyright-text">
-                <strong>leodanzamalloa</strong> | Todos los derechos reservados 2026
+                <strong><a class="leodan" href="https://leodanzamalloa.github.io/">leodanzamalloa</a></strong> | All rights reserved 2026
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Chat -->
     <div class="whatsapp-chat">
-        <a href="https://wa.me/51931023833?text=Hola%20Hunting%20Treasure%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos" 
-        class="whatsapp-button" 
-        target="_blank"
-        rel="noopener noreferrer">
+        <a href="https://wa.me/51931023833?text=Good%20afternoon%20Hunting%20Treasure%2C%20I%20would%20like%20more%20information%20about%20your%20tour%20packages." 
+           class="whatsapp-button" 
+           target="_blank"
+           rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
-            <span class="whatsapp-tooltip">¿Necesitas ayuda?</span>
+            <span class="whatsapp-tooltip">Need help?</span>
         </a>
     </div>
+
+    <!-- Cart Panel -->
+    <div class="carrito-panel" id="carritoPanel">
+        <div class="carrito-header">
+            <h3>Your Cart</h3>
+            <span class="cerrar-carrito" id="cerrarCarrito">&times;</span>
+        </div>
+        <div class="carrito-items" id="carritoItems"></div>
+        <div class="carrito-footer">
+            <div class="carrito-total">Total: $<span id="carritoTotal">0.00</span></div>
+            <div class="medios-pago">
+                <h4>Payment methods</h4>
+                <div class="pago-iconos">
+                    <a href="#" onclick="return consultarPago('Visa')" title="Pay with Visa"><i class="fab fa-cc-visa"></i></a>
+                    <a href="#" onclick="return consultarPago('Mastercard')" title="Pay with Mastercard"><i class="fab fa-cc-mastercard"></i></a>
+                    <a href="#" onclick="return consultarPago('American Express')" title="Pay with American Express"><i class="fab fa-cc-amex"></i></a>
+                    <a href="#" onclick="return consultarPago('PayPal')" title="Pay with PayPal"><i class="fab fa-cc-paypal"></i></a>
+                    <a href="#" onclick="return consultarPago('bank transfer')" title="Bank transfer"><i class="fas fa-university"></i></a>
+                </div>
+                <div class="selector-pago">
+                    <label for="metodoPago">Choose your payment method:</label>
+                    <select id="metodoPago">
+                        <option value="Credit/Debit card">Credit/Debit card</option>
+                        <option value="PayPal">PayPal</option>
+                        <option value="Bank transfer">Bank transfer</option>
+                        <option value="Cash (office)">Cash (office)</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn-pagar" id="btnPagar">Pay with WhatsApp</button>
+        </div>
+    </div>
+    <div class="overlay-carrito" id="overlayCarrito"></div>
+
+    <script src="data.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
-</html>
-
