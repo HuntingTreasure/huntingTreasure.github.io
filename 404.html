@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada | Hunting Treasure</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1A4D5E 0%, #0F2F3A 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 30px;
+      padding: 50px 40px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFBF00, #FF8C00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 20px rgba(255, 191, 0, 0.2);
+    }
+
+    .icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: #FFBF00;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #1A4D5E;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #FFBF00;
+      color: #1A4D5E;
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-home:hover {
+      background: #FFA500;
+      transform: translateX(5px);
+      box-shadow: 0 8px 20px rgba(255, 191, 0, 0.3);
+    }
+
+    .btn-home i {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    .btn-home:hover i {
+      transform: translateX(-5px);
+    }
+
+    .footer-note {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+      .error-code {
+        font-size: 5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <!-- Font Awesome para iconos (opcional pero recomendado) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="error-code">404</div>
+    <div class="icon">
+      <i class="fas fa-compass"></i>
+    </div>
+    <h1>¡Página no encontrada!</h1>
+    <p>
+      Parece que te has perdido en los Andes...<br>
+      La ruta que buscas no existe o ha sido movida.
+    </p>
+    <a href="/" class="btn-home">
+      <i class="fas fa-arrow-left"></i> Volver al inicio
+    </a>
+    <div class="footer-note">
+      <i class="fas fa-map-marked-alt"></i> Hunting Treasure – Tu compañero de aventuras
+    </div>
+  </div>
+
+  <!-- Script para redirigir a SPA (opcional, pero recomendado si usas enrutamiento interno) -->
+  <script>
+    // Si quieres mantener la navegación SPA, puedes redirigir a index.html con la ruta original
+    // Pero como esta página se mostrará para rutas no existentes, normalmente el fallback de GitHub Pages
+    // ya hará la redirección mediante el meta refresh. De todas formas, dejamos este script para asegurar.
+    (function() {
+      // Verifica si hay una ruta guardada en sessionStorage (puedes implementar)
+      const redirect = sessionStorage.getItem('redirect');
+      if (redirect && redirect !== location.pathname) {
+        sessionStorage.removeItem('redirect');
+        location.replace(redirect);
+      }
+    })();
+  </script>
+</body>
+</html>
